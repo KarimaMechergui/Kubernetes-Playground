@@ -10,10 +10,10 @@ ui:
   env:
     KEYCLOAK_REALM: onyxia-demo
     KEYCLOAK_CLIENT_ID: onyxia-client
-    KEYCLOAK_URL: https://keycloak.demo.insee.io/auth
+    KEYCLOAK_URL: https://keycloak.demo.insee.io
 api:
   env:
     keycloak.realm: onyxia-demo
-    keycloak.auth-server-url: https://keycloak.demo.insee.io/auth
+    keycloak.auth-server-url: https://keycloak.demo.insee.io
     authentication.mode: "openidconnect"
     springdoc.swagger-ui.oauth.clientId: onyxia-client
