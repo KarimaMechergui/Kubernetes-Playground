@@ -1,0 +1,19 @@
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: onyxia.demo.insee.io
+ui:
+  image:
+    name: inseefrlab/onyxia-web
+  env:
+    KEYCLOAK_REALM: onyxia-demo
+    KEYCLOAK_CLIENT_ID: onyxia-client
+    KEYCLOAK_URL: https://keycloak.demo.insee.io/auth
+api:
+  env:
+    keycloak.realm: onyxia-demo
+    keycloak.auth-server-url: https://keycloak.demo.insee.io/auth
+    authentication.mode: "openidconnect"
+    springdoc.swagger-ui.oauth.clientId: onyxia-client
